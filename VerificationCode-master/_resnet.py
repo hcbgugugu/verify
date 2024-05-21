@@ -102,7 +102,7 @@ class ResNet(nn.Module):
         # self.block5 = BasicBlock(256, 512)
         self.avgpool = nn.AdaptiveAvgPool2d(1)
         # 识别验证码一共32类
-        self.fc = nn.Linear(128, 32)
+        self.fc = nn.Linear(128, 62)#改了
 
     def forward(self, x):
         x = self.conv1(x)
